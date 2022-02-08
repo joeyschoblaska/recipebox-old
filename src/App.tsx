@@ -25,7 +25,7 @@ const App = () => {
     <div className="grid grid-cols-2 gap-2 h-full">
       <div className="bg-gray-500 h-screen">
         <textarea
-          className="resize-none w-full h-full p-4 outline-0 bg-gray-800 text-gray-100"
+          className="resize-none w-full h-full p-4 outline-0 bg-gray-800 text-gray-100 font-mono text-sm"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
