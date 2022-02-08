@@ -4,14 +4,23 @@ interface Recipe {
 }
 
 const parseRecipes = (str: string): Recipe[] => {
-  const lines = str.split("\n");
+  let recipes: Recipe[] = [];
 
-  return [
-    {
-      title: lines[0],
-      body: lines.slice(1).join(""),
-    },
-  ];
+  str.split("\n").forEach((line) => {
+    const titleMatch = line.match(/^#{1} (.*)/);
+
+    if (titleMatch) {
+      recipes.push({
+        title: titleMatch[1],
+        body: "",
+      });
+    } else if (recipes.length > 0) {
+      const recipe = recipes[recipes.length - 1];
+      recipe.body += line;
+    }
+  });
+
+  return recipes;
 };
 
 export default parseRecipes;
