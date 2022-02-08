@@ -16,11 +16,36 @@ const App = () => {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <div className="p-4 font-serif">
+      <div className="space-y-4 p-4 font-serif">
         {recipes.map((recipe) => (
           <div>
-            <div>{recipe.title}</div>
-            <div>{recipe.body}</div>
+            <div className="border-b border-gray-700 font-bold">
+              {recipe.title}
+            </div>
+            <div>
+              {recipe.body.map((line) => (
+                <div>{line}</div>
+              ))}
+              {recipe.steps && (
+                <table>
+                  {recipe.steps.map((step) => (
+                    <tr>
+                      <td>{step.title}</td>
+                      <td>
+                        {step.ingredients.map((ingredient) => (
+                          <div>{ingredient}</div>
+                        ))}
+                      </td>
+                      <td>
+                        {step.body.map((body) => (
+                          <div>{body}</div>
+                        ))}
+                      </td>
+                    </tr>
+                  ))}
+                </table>
+              )}
+            </div>
           </div>
         ))}
       </div>
