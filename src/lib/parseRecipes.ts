@@ -1,18 +1,18 @@
-interface Recipe {
+export interface RecipeType {
   title: string;
   subtitle: string;
   body: string[];
-  steps: Step[];
+  steps: RecipeStepType[];
 }
 
-interface Step {
+export interface RecipeStepType {
   title: string;
   ingredients: string[];
   body: string[];
 }
 
-const parseRecipes = (str: string): Recipe[] => {
-  let recipes: Recipe[] = [];
+const parseRecipes = (str: string): RecipeType[] => {
+  let recipes: RecipeType[] = [];
 
   str.split("\n").forEach((line) => {
     const titleMatch = line.match(/^#{1} (.*)/);
