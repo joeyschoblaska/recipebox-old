@@ -37,5 +37,6 @@ export default {
   alias: {
     lib: "./src/lib",
     components: "./src/components",
+    styles: "./src/styles",
   },
 };
