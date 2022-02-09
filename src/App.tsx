@@ -14,7 +14,7 @@ const App = () => {
       <div className="h-screen bg-gray-500">
         <Editor value={text} setValue={setText} />
       </div>
-      <div className="no-scrollbar h-screen overflow-scroll p-4 font-serif">
+      <div className="no-scrollbar h-screen overflow-scroll p-6 font-serif">
         <div className="mx-auto max-w-prose">
           {recipes.map((recipe, i) => (
             <Recipe recipe={recipe} key={i} />
