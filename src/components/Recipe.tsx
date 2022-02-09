@@ -4,7 +4,7 @@ import type { RecipeType } from "../lib/parseRecipes";
 const Recipe = ({ recipe }: { recipe: RecipeType }) => (
   <div className="mb-8">
     <div className="mb-2 flex items-end border-b-2 border-gray-700">
-      <div className="flex-grow text-lg font-bold">{recipe.title}</div>
+      <div className="flex-grow font-bold">{recipe.title}</div>
       <div>{recipe.subtitle}</div>
     </div>
     <div>
