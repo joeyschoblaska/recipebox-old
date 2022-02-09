@@ -479,14 +479,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-end {
   align-items: flex-end;
 }
-.gap-2 {
-  gap: 0.5rem;
-}
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
 .overflow-scroll {
   overflow: scroll;
 }
@@ -553,4 +545,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .outline-0 {
   outline-width: 0px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

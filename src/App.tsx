@@ -10,11 +10,11 @@ const App = () => {
   const recipes = parseRecipes(text);
 
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-2">
       <div className="h-screen bg-gray-500">
         <Editor value={text} setValue={setText} />
       </div>
-      <div className="h-screen space-y-4 overflow-scroll p-4 font-serif">
+      <div className="no-scrollbar h-screen overflow-scroll p-4 font-serif">
         <div className="mx-auto max-w-prose">
           {recipes.map((recipe, i) => (
             <Recipe recipe={recipe} key={i} />
