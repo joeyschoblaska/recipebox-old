@@ -18,9 +18,10 @@ const App = () => {
       </div>
       <div className="space-y-4 p-4 font-serif">
         {recipes.map((recipe) => (
-          <div className="mb-8 border-b border-gray-700">
-            <div className="mb-2 border-b-2 border-gray-700 text-lg font-bold">
-              {recipe.title}
+          <div className="mb-8">
+            <div className="mb-2 flex items-end border-b-2 border-gray-700">
+              <div className="flex-grow text-lg font-bold">{recipe.title}</div>
+              <div>{recipe.subtitle}</div>
             </div>
             <div>
               {recipe.body.length > 0 && (

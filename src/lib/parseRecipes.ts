@@ -1,5 +1,6 @@
 interface Recipe {
   title: string;
+  subtitle: string;
   body: string[];
   steps: Step[];
 }
@@ -19,9 +20,11 @@ const parseRecipes = (str: string): Recipe[] => {
     const ingredientMatch = line.match(/^[-\*] (.*)/);
 
     if (titleMatch) {
+      const [title, subtitle] = titleMatch[1].split("|");
       // push a new recipe onto the array
       recipes.push({
-        title: titleMatch[1],
+        title: title,
+        subtitle: subtitle,
         body: [],
         steps: [],
       });
