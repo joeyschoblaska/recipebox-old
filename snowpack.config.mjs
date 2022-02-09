@@ -34,4 +34,8 @@ export default {
     out: "docs",
     metaUrlPath: "snowpack",
   },
+  alias: {
+    lib: "./src/lib",
+    components: "./src/components",
+  },
 };

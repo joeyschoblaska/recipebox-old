@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./index.css";
-import placeholder from "./lib/placeholder";
-import parseRecipes from "./lib/parseRecipes";
-import Recipe from "./components/Recipe";
+import placeholder from "lib/placeholder";
+import parseRecipes from "lib/parseRecipes";
+import Recipe from "components/Recipe";
 
 const App = () => {
   const [text, setText] = useState(placeholder);

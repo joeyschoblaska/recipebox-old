@@ -1,5 +1,5 @@
 import React from "react";
-import type { RecipeType } from "../lib/parseRecipes";
+import type { RecipeType } from "lib/parseRecipes";
 
 const Recipe = ({ recipe }: { recipe: RecipeType }) => (
   <div className="mb-8">
