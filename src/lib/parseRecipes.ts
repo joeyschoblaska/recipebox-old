@@ -20,11 +20,11 @@ const parseRecipes = (str: string): Recipe[] => {
     const ingredientMatch = line.match(/^[-\*] (.*)/);
 
     if (titleMatch) {
-      const [title, subtitle] = titleMatch[1].split("|");
+      const [title, ...subtitle] = titleMatch[1].split("|");
       // push a new recipe onto the array
       recipes.push({
         title: title,
-        subtitle: subtitle,
+        subtitle: subtitle.join(" | "),
         body: [],
         steps: [],
       });

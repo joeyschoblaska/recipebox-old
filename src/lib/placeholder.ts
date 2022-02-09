@@ -1,4 +1,4 @@
-const placeholder = `# Eggnog | serves 2-3
+const placeholder = `# Eggnog | Jeffrey Morgenthaler | serves 2-3
 
 ## 1
 * 2 large eggs
