@@ -36,6 +36,6 @@ Heat the milk and butter until nearly boiling. Add flour and allow to seeth over
 * 3 eggs
 * salt and pepper to taste
 
-Add the reaming eggs and whisk again. Cook at 220C for about 1 hour.
+Add the remaining eggs and whisk again. Cook at 220C for about 1 hour.
 `;
 export default placeholder;
