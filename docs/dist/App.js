@@ -15,7 +15,7 @@ const App = () => {
     value: text,
     setValue: setText
   })), /* @__PURE__ */ React.createElement("div", {
-    className: "no-scrollbar h-screen overflow-scroll p-4 font-serif"
+    className: "no-scrollbar h-screen overflow-scroll p-6 font-serif"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "mx-auto max-w-prose"
   }, recipes.map((recipe, i) => /* @__PURE__ */ React.createElement(Recipe, {
