@@ -35,7 +35,7 @@ const parseRecipes = (str: string): Recipe[] => {
           ingredients: [],
           body: [],
         });
-      } else if (recipe.steps.length == 0) {
+      } else if (recipe.steps.length == 0 && line) {
         // no steps parsed yet, push onto recipe body
         recipe.body.push(line);
       } else {
@@ -44,7 +44,7 @@ const parseRecipes = (str: string): Recipe[] => {
         // push ingredient or body onto the last step
         if (ingredientMatch) {
           step.ingredients.push(ingredientMatch[1]);
-        } else {
+        } else if (line) {
           step.body.push(line);
         }
       }

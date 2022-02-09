@@ -18,25 +18,33 @@ const App = () => {
       </div>
       <div className="space-y-4 p-4 font-serif">
         {recipes.map((recipe) => (
-          <div>
-            <div className="border-b border-gray-700 font-bold">
+          <div className="mb-8 border-b border-gray-700">
+            <div className="mb-2 border-b-2 border-gray-700 text-lg font-bold">
               {recipe.title}
             </div>
             <div>
-              {recipe.body.map((line) => (
-                <div>{line}</div>
-              ))}
+              {recipe.body.length > 0 && (
+                <div className="border-b border-gray-700 py-2">
+                  {recipe.body.map((line) => (
+                    <div className="pb-2">{line}</div>
+                  ))}
+                </div>
+              )}
               {recipe.steps && (
-                <table>
+                <table className="mt-4">
                   {recipe.steps.map((step) => (
                     <tr>
-                      <td>{step.title}</td>
-                      <td>
-                        {step.ingredients.map((ingredient) => (
-                          <div>{ingredient}</div>
-                        ))}
+                      <td className="whitespace-nowrap pr-4 pb-4 align-top">
+                        {step.title}
                       </td>
-                      <td>
+                      <td className="w-[40%] px-4 pb-4 align-top">
+                        <ul className="ml-4 list-disc">
+                          {step.ingredients.map((ingredient) => (
+                            <li>{ingredient}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 pb-4 align-top">
                         {step.body.map((body) => (
                           <div>{body}</div>
                         ))}
