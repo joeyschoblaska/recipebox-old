@@ -1,8 +1,9 @@
 import React, {useState} from "../snowpack/pkg/react.js";
-import "./index.css.proxy.js";
+import "./styles/index.css.proxy.js";
 import placeholder from "./lib/placeholder.js";
 import parseRecipes from "./lib/parseRecipes.js";
 import Recipe from "./components/Recipe.js";
+import Editor from "./components/Editor.js";
 const App = () => {
   const [text, setText] = useState(placeholder);
   const recipes = parseRecipes(text);
@@ -10,10 +11,9 @@ const App = () => {
     className: "grid grid-cols-2 gap-2"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "h-screen bg-gray-500"
-  }, /* @__PURE__ */ React.createElement("textarea", {
-    className: "h-full w-full resize-none bg-gray-800 p-4 font-mono text-sm text-gray-100 outline-0",
+  }, /* @__PURE__ */ React.createElement(Editor, {
     value: text,
-    onChange: (e) => setText(e.target.value)
+    setValue: setText
   })), /* @__PURE__ */ React.createElement("div", {
     className: "h-screen space-y-4 overflow-scroll p-4 font-serif"
   }, /* @__PURE__ */ React.createElement("div", {
