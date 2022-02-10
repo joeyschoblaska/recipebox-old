@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, RefObject } from "react";
 import { UploadIcon, ChevronUpIcon } from "components/Icons";
 import ComingSoon from "components/ComingSoon";
 import PrintButton from "components/PrintButton";
 
-const Nav = () => {
+const Nav = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
@@ -26,9 +26,7 @@ const Nav = () => {
           </ComingSoon>
         </div>
         <div className="h-6 flex-initial">
-          <ComingSoon>
-            <PrintButton />
-          </ComingSoon>
+          <PrintButton printRef={printRef} />
         </div>
       </div>
       <div

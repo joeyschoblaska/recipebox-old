@@ -1,10 +1,16 @@
-import React from "react";
+import React, { RefObject } from "react";
 import { PrinterIcon } from "components/Icons";
+import ReactToPrint from "react-to-print";
 
-const PrintButton = () => (
-  <button>
-    <PrinterIcon />
-  </button>
+const PrintButton = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => (
+  <ReactToPrint
+    trigger={() => (
+      <button>
+        <PrinterIcon />
+      </button>
+    )}
+    content={() => printRef.current}
+  />
 );
 
 export default PrintButton;
