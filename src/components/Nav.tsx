@@ -57,7 +57,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            Source:{" "}
+            Github:{" "}
             <a
               href="https://github.com/joeyschoblaska/recipebox"
               className="underline hover:text-purple-50"

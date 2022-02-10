@@ -28,7 +28,7 @@ const Nav = () => {
   }, /* @__PURE__ */ React.createElement("li", null, "Made by", " ", /* @__PURE__ */ React.createElement("a", {
     href: "https://twitter.com/joeyschoblaska",
     className: "underline hover:text-purple-50"
-  }, "Joey Schoblaska")), /* @__PURE__ */ React.createElement("li", null, "Source:", " ", /* @__PURE__ */ React.createElement("a", {
+  }, "Joey Schoblaska")), /* @__PURE__ */ React.createElement("li", null, "Github:", " ", /* @__PURE__ */ React.createElement("a", {
     href: "https://github.com/joeyschoblaska/recipebox",
     className: "underline hover:text-purple-50"
   }, "joeyschoblaska/recipebox")))));
