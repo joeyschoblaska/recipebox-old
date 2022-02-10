@@ -43,8 +43,8 @@ const Nav = () => {
           >
             cuisine package
           </a>{" "}
-          for LaTeX, which groups instructions and ingredients together under
-          each step.
+          for LaTeX, which groups instructions and ingredients together for each
+          step.
         </p>
         <ul className="list-inside list-disc pt-3">
           <li>
