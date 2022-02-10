@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { PrinterIcon, UploadIcon, ChevronUpIcon } from "components/Icons";
+import { UploadIcon, ChevronUpIcon } from "components/Icons";
 import ComingSoon from "components/ComingSoon";
+import PrintButton from "components/PrintButton";
 
 const Nav = () => {
   const [showAbout, setShowAbout] = useState(false);
@@ -24,9 +25,9 @@ const Nav = () => {
             <UploadIcon />
           </ComingSoon>
         </div>
-        <div className="flex-initial">
+        <div className="h-6 flex-initial">
           <ComingSoon>
-            <PrinterIcon />
+            <PrintButton />
           </ComingSoon>
         </div>
       </div>
