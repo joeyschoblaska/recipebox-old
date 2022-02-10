@@ -452,8 +452,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen {
   height: 100vh;
 }
-.h-full {
-  height: 100%;
+.h-16 {
+  height: 4rem;
 }
 .w-full {
   width: 100%;
@@ -463,6 +463,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-prose {
   max-width: 65ch;
+}
+.flex-none {
+  flex: none;
 }
 .flex-grow {
   flex-grow: 1;
@@ -475,6 +478,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
 }
 .items-end {
   align-items: flex-end;
@@ -502,6 +508,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
 }
 .p-6 {
   padding: 1.5rem;

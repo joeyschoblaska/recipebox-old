@@ -12,8 +12,10 @@ const App = () => {
 
   return (
     <div className="grid grid-cols-2">
-      <div className="h-screen bg-gray-500">
-        <Editor value={text} setValue={setText} />
+      <div className="flex h-screen flex-col bg-gray-500">
+        <div className="overflow-scroll">
+          <Editor value={text} setValue={setText} />
+        </div>
         <Nav />
       </div>
       <div className="no-scrollbar h-screen overflow-scroll p-6 font-serif">

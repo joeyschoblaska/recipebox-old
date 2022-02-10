@@ -10,8 +10,8 @@ const Editor = ({
   value,
   onValueChange: (v) => setValue(v),
   highlight: (v) => prism.highlight(v, prism.languages.md, "markdown"),
-  className: "h-full w-full resize-none bg-gray-800 p-4 font-mono text-sm text-gray-100",
+  className: "w-full resize-none bg-gray-800 p-4 font-mono text-sm text-gray-100",
   textareaClassName: "outline-0",
-  padding: 14
+  padding: 20
 });
 export default Editor;
