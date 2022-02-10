@@ -8,9 +8,17 @@ const ComingSoon = ({ children }: { children: JSX.Element }) => {
     <div
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
-      className="cursor-pointer"
     >
-      {hovering ? <XIcon /> : children}
+      {hovering ? (
+        <div className="flex">
+          <div>Coming soon</div>
+          <div className="ml-2 cursor-pointer">
+            <XIcon />
+          </div>
+        </div>
+      ) : (
+        children
+      )}
     </div>
   );
 };

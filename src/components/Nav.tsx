@@ -9,17 +9,16 @@ const Nav = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => {
   return (
     <div>
       <div className="flex h-16 flex-none items-center bg-purple-600 px-6 font-mono text-purple-100">
-        <div className="flex-1">
-          <div
-            className="flex cursor-pointer"
-            onClick={() => setShowAbout(!showAbout)}
-          >
-            <div className="mr-2">About</div>
-            <div className={showAbout ? "rotate-180" : ""}>
-              <ChevronUpIcon />
-            </div>
+        <div
+          className="flex flex-initial cursor-pointer"
+          onClick={() => setShowAbout(!showAbout)}
+        >
+          <div className="mr-2">About</div>
+          <div className={showAbout ? "rotate-180" : ""}>
+            <ChevronUpIcon />
           </div>
         </div>
+        <div className="flex-1"></div>
         <div className="mr-4 flex-initial">
           <ComingSoon>
             <UploadIcon />
