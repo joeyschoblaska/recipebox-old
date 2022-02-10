@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="grid grid-cols-2">
       <div className="flex h-screen flex-col bg-gray-500">
-        <div className="overflow-scroll">
+        <div className="no-scrollbar overflow-scroll">
           <Editor value={text} setValue={setText} />
         </div>
         <Nav printRef={printRef} />

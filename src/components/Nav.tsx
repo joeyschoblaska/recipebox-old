@@ -2,6 +2,7 @@ import React, { useState, RefObject } from "react";
 import { UploadIcon, ChevronUpIcon } from "components/Icons";
 import ComingSoon from "components/ComingSoon";
 import PrintButton from "components/PrintButton";
+import About from "components/Nav/About";
 
 const Nav = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => {
   const [showAbout, setShowAbout] = useState(false);
@@ -28,42 +29,8 @@ const Nav = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => {
           <PrintButton printRef={printRef} />
         </div>
       </div>
-      <div
-        className={`${
-          showAbout ? "visible" : "hidden"
-        } bg-purple-500 p-6 font-mono text-sm text-purple-100`}
-      >
-        <p>
-          Format Markdown recipes as cards from Ben Cohen's{" "}
-          <a
-            href="http://ftp.gwdg.de/pub/ctan/macros/latex/contrib/cuisine/cuisine.pdf"
-            className="underline hover:text-purple-50"
-          >
-            cuisine package
-          </a>{" "}
-          for LaTeX, which groups instructions and ingredients together for each
-          step.
-        </p>
-        <ul className="list-inside list-disc pt-3">
-          <li>
-            Made by{" "}
-            <a
-              href="https://twitter.com/joeyschoblaska"
-              className="underline hover:text-purple-50"
-            >
-              Joey Schoblaska
-            </a>
-          </li>
-          <li>
-            Github:{" "}
-            <a
-              href="https://github.com/joeyschoblaska/recipebox"
-              className="underline hover:text-purple-50"
-            >
-              joeyschoblaska/recipebox
-            </a>
-          </li>
-        </ul>
+      <div className={showAbout ? "visible" : "hidden"}>
+        <About />
       </div>
     </div>
   );
