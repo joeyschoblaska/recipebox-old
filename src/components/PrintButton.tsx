@@ -10,6 +10,7 @@ const PrintButton = ({ printRef }: { printRef: RefObject<HTMLDivElement> }) => (
       </button>
     )}
     content={() => printRef.current}
+    documentTitle={"recipes"}
   />
 );
 

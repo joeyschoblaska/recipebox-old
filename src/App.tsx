@@ -19,8 +19,11 @@ const App = () => {
         </div>
         <Nav printRef={printRef} />
       </div>
-      <div className="no-scrollbar h-screen overflow-scroll p-6 font-serif">
-        <div className="mx-auto max-w-prose" ref={printRef}>
+      <div className="no-scrollbar h-screen overflow-scroll p-6">
+        <div
+          className="mx-auto max-w-prose font-serif print:pt-20"
+          ref={printRef}
+        >
           {recipes.map((recipe, i) => (
             <Recipe recipe={recipe} key={i} />
           ))}
