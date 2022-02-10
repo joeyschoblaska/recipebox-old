@@ -4,6 +4,7 @@
     "prismjs/components/prism-markdown": "./prismjs/components/prism-markdown.js",
     "react": "./react.js",
     "react-dom": "./react-dom.js",
-    "react-simple-code-editor": "./react-simple-code-editor.js"
+    "react-simple-code-editor": "./react-simple-code-editor.js",
+    "react-to-print": "./react-to-print.js"
   }
 }

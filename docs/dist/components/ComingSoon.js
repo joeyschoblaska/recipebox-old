@@ -4,8 +4,11 @@ const ComingSoon = ({children}) => {
   const [hovering, setHovering] = useState(false);
   return /* @__PURE__ */ React.createElement("div", {
     onMouseEnter: () => setHovering(true),
-    onMouseLeave: () => setHovering(false),
-    className: "cursor-pointer"
-  }, hovering ? /* @__PURE__ */ React.createElement(XIcon, null) : children);
+    onMouseLeave: () => setHovering(false)
+  }, hovering ? /* @__PURE__ */ React.createElement("div", {
+    className: "flex"
+  }, /* @__PURE__ */ React.createElement("div", null, "Coming soon"), /* @__PURE__ */ React.createElement("div", {
+    className: "ml-2 cursor-pointer"
+  }, /* @__PURE__ */ React.createElement(XIcon, null))) : children);
 };
 export default ComingSoon;
