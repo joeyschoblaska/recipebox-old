@@ -10,32 +10,36 @@ const Recipe = ({ recipe }: { recipe: RecipeType }) => (
     <div>
       {recipe.body.length > 0 && (
         <div className="border-b border-gray-700 py-2">
-          {recipe.body.map((line) => (
-            <div className="pb-2">{line}</div>
+          {recipe.body.map((line, i) => (
+            <div className="pb-2" key={i}>
+              {line}
+            </div>
           ))}
         </div>
       )}
       {recipe.steps && (
         <table className="mt-4">
-          {recipe.steps.map((step) => (
-            <tr>
-              <td className="whitespace-nowrap pr-4 pb-4 align-top">
-                {step.title}
-              </td>
-              <td className="w-[40%] px-4 pb-4 align-top">
-                <ul className="ml-4 list-disc">
-                  {step.ingredients.map((ingredient) => (
-                    <li>{ingredient}</li>
+          <tbody>
+            {recipe.steps.map((step, i) => (
+              <tr key={i}>
+                <td className="whitespace-nowrap pr-4 pb-4 align-top">
+                  {step.title}
+                </td>
+                <td className="w-[40%] px-4 pb-4 align-top">
+                  <ul className="ml-4 list-disc">
+                    {step.ingredients.map((ingredient, i) => (
+                      <li key={i}>{ingredient}</li>
+                    ))}
+                  </ul>
+                </td>
+                <td className="px-4 pb-4 align-top">
+                  {step.body.map((body, i) => (
+                    <div key={i}>{body}</div>
                   ))}
-                </ul>
-              </td>
-              <td className="px-4 pb-4 align-top">
-                {step.body.map((body) => (
-                  <div>{body}</div>
-                ))}
-              </td>
-            </tr>
-          ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       )}
     </div>
