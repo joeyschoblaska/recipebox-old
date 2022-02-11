@@ -10,8 +10,7 @@ const About = () => (
       >
         cuisine package
       </a>{" "}
-      for LaTeX, which groups instructions and ingredients together for each
-      step.
+      for LaTeX, which groups instructions and ingredients together by step.
     </p>
     <ul className="list-inside list-disc pt-3">
       <li>
